@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color:#3f3f3f;
 }
 
@@ -62,7 +62,7 @@ body {
 
 /* Modal Animation */
 
-@keyframes animatemodal {
+/* @keyframes animatemodal {
     from {
         top: -300px;
         opacity: 0;
@@ -71,4 +71,68 @@ body {
         top: 50%;
         opacity: 1;
     }
+} */
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.container {
+    width: 65%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.container .title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container .content .question {
+    padding: 18px 0px;
+    font-size: 22px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.container .content .question::after {
+    content: '+';
+    position: absolute;
+    right: -5px;
+}
+
+.container .content .answer {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    transition: .5s;
+    /* hidding answer text */
+    height: 0px;
+    overflow: hidden;
+}
+
+
+/* Javascript Styling */
+
+.container .content.active .answer {
+    height: 150px;
+
+}
+
+.container content.active .question {
+    font-size: 18px;
+    transition: .5s;
+}
+
+.container .content.active .question::after {
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
 }
